@@ -1,0 +1,23 @@
+<mat-toolbar>
+    <div class="nav-display">
+      <div>
+        <span>My Application</span>
+      </div>
+      <div>
+        <span>
+          Theme
+        </span>
+          <select (change)="themeChange($event)">
+            <option
+              *ngFor="let theme of themes"
+              [value]="theme.value"
+              (click)="themeChange(theme.value)"
+            >
+              {{theme.label}}
+            </option>
+          </select>
+      </div>
+    </div>
+  
+  </mat-toolbar>
+  
