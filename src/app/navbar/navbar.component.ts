@@ -18,8 +18,8 @@ export class NavbarComponent implements OnInit {
       value: 'pink-theme',
     },
     {
-      label: 'Freeze',
-      value: 'freezing-theme',
+      label: 'Maker',
+      value: 'maker-theme',
     }
   ]
 

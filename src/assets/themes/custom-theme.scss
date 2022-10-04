@@ -1,0 +1,77 @@
+@use '@angular/material' as mat;
+@mixin cust-theme($theme, $default1: null, $default2: null){
+
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+
+  .contain{
+    background-color: mat.get-color-from-palette($primary, first-color);
+    height: 100vh;
+    padding: 2rem;
+  }
+
+  .mat-toolbar {
+    color: mat.get-color-from-palette($primary, 300) !important;
+    background-color: mat.get-color-from-palette($accent, third-color) !important;
+    $border-color: mat.get-contrast-color-from-palette($warn, second-color);
+    border-bottom: 2px solid rgba($border-color, 1) !important;
+  }
+
+  .mat-card{
+    background-color: mat.get-color-from-palette($primary, 50) !important;
+    $border-color: mat.get-contrast-color-from-palette($warn, second-color);
+  }
+
+  mat-error{
+    color: mat.get-color-from-palette($warn, third-color) !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  {
+    color: mat.get-contrast-color-from-palette($warn, second-color) !important;
+  }
+
+  .font-size-huge{
+    font-size: 32px;
+    text-transform: uppercase;
+  }
+
+  .mat-form-field{
+    color: mat.get-contrast-color-from-palette($warn, first-color) !important;
+    &.mat-form-field-underline .mat-form-field-appearance-fill .mat-form-field-underline:before {
+      color: red;
+    }
+  }
+
+  mat-icon,
+  .icon-color-theme {
+    color: mat.get-color-from-palette($warn, 500) !important;
+    fill: mat.get-color-from-palette($warn, 500) !important;
+    font-size: 100px !important;
+  }
+
+  p{
+    color: mat.get-contrast-color-from-palette($warn, first-color) !important;
+  }
+
+  @if $default1 {
+    button.primary{
+      background-color: mat.get-color-from-palette($primary, 800) !important;
+      color: mat.get-contrast-color-from-palette($primary, third-color) !important;
+    }
+    button.accent{
+      background-color: mat.get-color-from-palette($accent, 800) !important;
+      color: mat.get-contrast-color-from-palette($accent, third-color) !important;
+    }
+    button.warn {
+      background-color: mat.get-color-from-palette($warn, 800) !important;
+      color: mat.get-contrast-color-from-palette($warn, third-color) !important;
+    }
+  }
+
+}
