@@ -8,4 +8,17 @@
           <button mat-button>SHARE</button>
         </mat-card-actions>
     </mat-card>
+    <div class="example-form"  [formGroup]="mainFormAll">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput formControlName="emailFormControl" placeholder="Ex. pat@example.com">
+        <mat-error
+          *ngIf="
+          mainFormAll?.get('emailFormControl').hasError('required') &&
+          (mainFormAll?.get('emailFormControl')?.dirty || mainFormAll?.get('emailFormControl')?.touched)
+          ">
+          Please enter a valid email address
+        </mat-error>
+      </mat-form-field>
+    </div>
 </div>

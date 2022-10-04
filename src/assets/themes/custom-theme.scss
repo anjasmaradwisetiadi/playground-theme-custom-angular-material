@@ -59,19 +59,4 @@
     color: mat.get-contrast-color-from-palette($warn, first-color) !important;
   }
 
-  @if $default1 {
-    button.primary{
-      background-color: mat.get-color-from-palette($primary, 800) !important;
-      color: mat.get-contrast-color-from-palette($primary, third-color) !important;
-    }
-    button.accent{
-      background-color: mat.get-color-from-palette($accent, 800) !important;
-      color: mat.get-contrast-color-from-palette($accent, third-color) !important;
-    }
-    button.warn {
-      background-color: mat.get-color-from-palette($warn, 800) !important;
-      color: mat.get-contrast-color-from-palette($warn, third-color) !important;
-    }
-  }
-
 }
