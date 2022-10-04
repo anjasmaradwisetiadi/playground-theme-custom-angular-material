@@ -1,4 +1,6 @@
-
-
 @use '@angular/material' as mat;
 @include mat.core();
+
+@import "assets/theme/pink_theme";
+@import "assets/theme/murasaki_theme";
+@import "assets/theme/maker_theme";

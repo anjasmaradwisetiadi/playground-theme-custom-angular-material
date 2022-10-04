@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'playground-theming-angular';
+  currentTheme = 'murasaki-theme'
+
+  acceptTheme(params: string){
+    this.currentTheme = params;
+  }
+
 }

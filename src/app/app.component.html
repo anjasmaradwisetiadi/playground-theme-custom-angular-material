@@ -1,4 +1,8 @@
-<div class="root">
-  <app-navbar></app-navbar>
+<div class="root"
+  [ngClass]="currentTheme"
+>
+  <app-navbar
+    (themeValue)="acceptTheme($event)"
+  ></app-navbar>
   <app-contain></app-contain>
 </div>
