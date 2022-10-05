@@ -29,7 +29,7 @@ $theme-color: (
 .murasaki-theme {
   $primary: mat.define-palette($theme-color);
   $accent: mat.define-palette($theme-color);
-  $warn: mat.define-palette($theme-color);
+  $warn: mat.define-palette($theme-color, second-color);
   $theme: mat.define-dark-theme($primary, $accent, $warn);
 
   @include cust-theme($theme, true, false);
