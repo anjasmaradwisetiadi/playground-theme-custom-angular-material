@@ -14,12 +14,12 @@ export class NavbarComponent implements OnInit {
       value: 'murasaki-theme',
     },
     {
-      label: 'Pink',
-      value: 'pink-theme',
-    },
-    {
       label: 'Maker',
       value: 'maker-theme',
+    },
+    {
+      label: 'Pink',
+      value: 'pink-theme',
     }
   ]
 
